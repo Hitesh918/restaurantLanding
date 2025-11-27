@@ -41,6 +41,10 @@ const Properties = () => {
 
       <p className="para-line">business today.</p>
     </div>
+
+            <button style={{marginLeft: '42%'}} className="explore-btn">
+              Get your Restaurant Listed
+            </button>
             
               <LogoStrips />
               

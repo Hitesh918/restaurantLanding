@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function FadeCarouselWithControls() {
   const slides = [
-    { src: "/caro/1.png", label: "Discover Venue 1" },
+    { src: "/caro/1.jpg", label: "Discover Venue 1" },
     { src: "/caro/2.png", label: "Discover Venue 2" },
     { src: "/caro/3.png", label: "Discover Venue 3" },
     { src: "/caro/4.png", label: "Discover Venue 4" },

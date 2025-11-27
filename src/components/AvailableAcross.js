@@ -12,7 +12,7 @@
 const AvailableAcross = () => {
     return (
         <div>
-            <img style={{width : '84%' , marginTop : "3rem" , marginBottom : "3rem"}} src="/across.png" alt="Available Across Canada" />
+            <img style={{width : '72%' , marginTop : "2rem" , marginBottom : "2rem"}} src="/across.png" alt="Available Across Canada" />
             <div className="gallery-grid">
       {items1.map((item, idx) => (
         <div key={idx} className="gallery-card">

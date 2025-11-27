@@ -1,11 +1,11 @@
 export default function AutoScrollCarousel() {
   const slides = [
-    { src: "/caro/1.png", label: "Label 1" },
-    { src: "/caro/2.png", label: "Label 2" },
-    { src: "/caro/3.png", label: "Label 3" },
-    { src: "/caro/4.png", label: "Label 4" },
-    { src: "/caro/5.png", label: "Label 5" },
-    { src: "/caro/6.png", label: "Label 6" }
+    { src: "/slider/1.png", label: "Label 1" },
+    { src: "/slider/2.png", label: "Label 2" },
+    { src: "/slider/3.png", label: "Label 3" },
+    { src: "/slider/4.png", label: "Label 4" },
+    { src: "/slider/5.png", label: "Label 5" },
+    { src: "/slider/6.png", label: "Label 6" }
   ];
 
   const loopSlides = [...slides, ...slides];

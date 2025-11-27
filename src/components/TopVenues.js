@@ -7,11 +7,11 @@ const TopVenues = () => {
              <style>
         {`
           .tb-container {
+          max-width: 50rem;
             color: white;
-            max-width: 600px;
             position: absolute;
-            left: 60%;
-            top: 375%;
+            left: 38%;
+            top: 352%;
             text-align: left;
 
           }
@@ -44,7 +44,7 @@ const TopVenues = () => {
 
           .tb-small {
             margin-top: 12px;
-            font-size: 11px;
+            font-size: 18px;
             opacity: 0.8;
           }
         `}
@@ -55,7 +55,7 @@ const TopVenues = () => {
           Introducing <span className="tb-highlight">Top Restaurants</span>
         </p>
 
-        <p className="tb-sub">
+        <p style={{marginTop : "-1rem"}} className="tb-heading">
           your guide to discovering the finest venue.
         </p>
 
@@ -72,7 +72,7 @@ const TopVenues = () => {
 
              <img style={{width : '20%' , marginTop : "3rem" , position: "relative" , right : "30%"}} src="/top.png" alt="Available Across Canada" />
              <br />
-             <img style={{width : '40%' , marginTop : "1rem" , marginBottom : "3rem", position: "relative" , right : "20%"}} src="/venues.png" alt="Available Across Canada" />
+             <img style={{width : '40%' , marginTop : "2rem" , marginBottom : "3rem", position: "relative" , right : "20%"}} src="/venues.png" alt="Available Across Canada" />
             <FadeCarousel />
 
         
