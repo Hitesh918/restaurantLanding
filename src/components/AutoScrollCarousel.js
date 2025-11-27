@@ -1,14 +1,17 @@
-export default function AutoScrollCarousel() {
-  const slides = [
-    { src: "/slider/1.png", label: "Label 1" },
-    { src: "/slider/2.png", label: "Label 2" },
-    { src: "/slider/3.png", label: "Label 3" },
-    { src: "/slider/4.png", label: "Label 4" },
-    { src: "/slider/5.png", label: "Label 5" },
-    { src: "/slider/6.png", label: "Label 6" }
-  ];
 
+export default function AutoScrollCarousel({
+  slides = [],
+  direction = "left",      // "left" or "right"
+  width = 300,             // width of each card
+  height = 180             // height of each card
+}) {
+
+  // duplicate slides for infinite scrolling
   const loopSlides = [...slides, ...slides];
+
+  // direction logic
+  const animationDirection =
+    direction === "right" ? "scroll-right" : "scroll-left";
 
   return (
     <>
@@ -22,22 +25,29 @@ export default function AutoScrollCarousel() {
           }
 
           .carousel-track {
-            display: inline-flex;     /* IMPORTANT: prevents flex shrinking/collapse */
-            white-space: nowrap;      /* Keeps items in one line */
-            animation: scroll 20s linear infinite;
+            display: inline-flex;
+            white-space: nowrap;
+            animation: ${animationDirection} 20s linear infinite;
           }
 
-          @keyframes scroll {
+          /* Scroll Left */
+          @keyframes scroll-left {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
           }
 
+          /* Scroll Right */
+          @keyframes scroll-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+
           .carousel-item {
             position: relative;
-            width: 300px;
-            height: 180px;
+            width: ${width}rem;
+            height: ${height}rem;
             margin-right: 30px;
-            display: inline-block;   /* Prevents shrinking */
+            display: inline-block;
             border-radius: 12px;
             overflow: hidden;
           }
@@ -51,23 +61,29 @@ export default function AutoScrollCarousel() {
 
           .carousel-label {
             position: absolute;
-            bottom: 10px;
-            left: 12px;
-            padding: 6px 12px;
-            background: rgba(0,0,0,0.6);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: none;
             color: white;
-            border-radius: 6px;
-            font-size: 14px;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.25;
+            white-space: normal;
+            
           }
+
         `}
       </style>
 
       <div className="carousel-wrapper">
-        <div className="carousel-track">
+        <div style={{ animation: `${animationDirection} 20s linear infinite` }} className="carousel-track">
           {loopSlides.map((item, i) => (
             <div className="carousel-item" key={i}>
               <img src={item.src} className="carousel-img" />
-              <div className="carousel-label">{item.label}</div>
+              {item.label && (
+                <div className="carousel-label">{item.label}</div>
+              )}
             </div>
           ))}
         </div>

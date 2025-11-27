@@ -3,6 +3,7 @@ import Background from './components/Background';
 import AvailableAcross from './components/AvailableAcross';
 import Properties from './components/Properties';
 import TopVenues from './components/TopVenues';
+import EventTypes from './components/EventTypes';
 import Advisor from './components/Advisor';
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <AvailableAcross />
       <Properties />
       <TopVenues />
+      <EventTypes />
       <Advisor />
     </div>
   );

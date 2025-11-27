@@ -2,6 +2,16 @@
 import LogoStrips from "./LogoStrips";
 import AutoScrollCarousel from "./AutoScrollCarousel";
 const Properties = () => {
+
+  const slidesData = [
+  { src: "/PropertiesSlider/1.png", label: "Yachts" },
+  { src: "/PropertiesSlider/2.png", label: "Hotels" },
+  { src: "/PropertiesSlider/3.png", label: "Restaurants" },
+  { src: "/PropertiesSlider/4.png", label: "Bars/Clubs" },
+  { src: "/PropertiesSlider/5.png", label: "Resorts" },
+  { src: "/PropertiesSlider/6.png", label: "Conference Centers" }
+];
+
     return (
         
         <div style={{backgroundColor : 'black '}} >
@@ -48,7 +58,12 @@ const Properties = () => {
             
               <LogoStrips />
               
-                <AutoScrollCarousel />
+                <AutoScrollCarousel 
+                slides={slidesData}
+                direction="left"
+                width={18}
+                height={11}
+                />
             
         </div>
     );
