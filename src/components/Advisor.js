@@ -4,6 +4,7 @@ const Advisor = () => {
     height: "100vh",
     position: "relative",
     overflow: "hidden",
+    minHeight: '100vh',
   };
 
   const imageStyle = {

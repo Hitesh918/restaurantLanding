@@ -2,19 +2,9 @@ import SearchIcon from '@mui/icons-material/Search';
 
 
 const BreadCrumbs = () => {
-    const boxStyle = {
-        width: '72%',
-        height: '10rem',
-        display: 'flex',
-        alignItems: 'center',
-        fontSize: '1rem',
-        position : "absolute",
-        top : "50%",
-        left : "14%",
-    };
 
     return (
-        <div style={boxStyle}>
+        <div className="bread-crumbs-container">
   <style>
         {`
           .search-bar {
@@ -28,10 +18,27 @@ const BreadCrumbs = () => {
             border-radius: 8px;
           }
 
+          @media (max-width: 768px) {
+            .search-bar {
+              flex-direction: column;
+              height: auto;
+              padding: 20px;
+            }
+          }
+
           .search-section {
             display: flex;
             gap: 40px;
             align-items: center;
+          }
+
+          @media (max-width: 768px) {
+            .search-section {
+              flex-direction: column;
+              gap: 20px;
+              margin-bottom: 20px;
+              width: 100%;
+            }
           }
 
           .search-block {

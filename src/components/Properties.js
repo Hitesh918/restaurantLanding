@@ -37,7 +37,7 @@ const Properties = () => {
         `}
       </style>
 
-           <img style={{width : '84%' , marginTop : "3rem" , marginBottom : "3rem"}} src="/properties.jpg" alt="Available Across Canada" />
+           <img style={{width : '90%' , marginTop : "3rem" , marginBottom : "3rem"}} src="/properties.jpg" alt="Available Across Canada" />
 
            <div className="para-container">
       <p className="para-line">
@@ -52,7 +52,7 @@ const Properties = () => {
       <p className="para-line">business today.</p>
     </div>
 
-            <button style={{marginLeft: '42%'}} className="explore-btn">
+            <button style={{margin: '0 auto 2rem'}} className="explore-btn">
               Get your Restaurant Listed
             </button>
             

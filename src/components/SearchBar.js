@@ -5,14 +5,16 @@ import SearchIcon from '@mui/icons-material/Search';
 const Search = styled('div')(({ theme }) => ({
   borderRadius: theme.shape.borderRadius,
   backgroundColor: '#363636',
-  paddingLeft: theme.spacing(1),      // 🔥 Fix: gives breathing space to icon
+  paddingLeft: theme.spacing(1),
   paddingRight: theme.spacing(1),
   width: '100%',
-  maxWidth: 300,                      // 🔥 Fix: limits max width
-  height: 45,                          // nice consistent height
+  [theme.breakpoints.up('sm')]: {
+    width: 'auto',
+  },
+  maxWidth: 300,
+  height: 45,
   display: 'flex',
   alignItems: 'center',
-  marginLeft: theme.spacing(39),
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({

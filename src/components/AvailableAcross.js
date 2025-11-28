@@ -7,12 +7,13 @@
   const items2 = [
     { img: "/l4.jpg", title: "Destination 04" },
     { img: "/l5.jpg", title: "Destination 05" },
+    { img: "/l1.jpg", title: "Destination 01" },
   ];
 
 const AvailableAcross = () => {
     return (
-        <div>
-            <img style={{width : '72%' , marginTop : "2rem" , marginBottom : "2rem"}} src="/across.png" alt="Available Across Canada" />
+        <div style={{minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '2rem 0'}}>
+            <img style={{width : '90%' , maxWidth: '1400px', marginTop : "2rem" , marginBottom : "2rem"}} src="/across.png" alt="Available Across Canada" />
             <div className="gallery-grid">
       {items1.map((item, idx) => (
         <div key={idx} className="gallery-card">
@@ -33,7 +34,7 @@ const AvailableAcross = () => {
 
     <div className="gallery-grid"  style={{marginTop : '2rem' , marginBottom : '3rem'}}>
       {items2.map((item, idx) => (
-        <div style={{width : '40rem' , marginLeft : '2rem'}} key={idx} className="gallery-card">
+        <div style={{width : '100%'}} key={idx} className="gallery-card">
           <img  src={item.img} alt={item.title} className="gallery-img" />
             {/* overlay */}
             <div className="gallery-overlay">

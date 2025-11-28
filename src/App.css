@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.App > * {
+  scroll-snap-align: start;
 }
 
 .App-logo {
@@ -37,6 +44,74 @@
   }
 }
 
+.main-heading {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.sub-heading {
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+  left: 14%;
+  top: 40%;
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 3rem;
+    top: 25%;
+  }
+  .sub-heading {
+    font-size: 1.5rem;
+    left: 10%;
+    top: 35%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 2rem;
+    top: 20%;
+  }
+  .sub-heading {
+    font-size: 1rem;
+    left: 5%;
+    top: 30%;
+  }
+}
+
+.bread-crumbs-container {
+  width: 72%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 14%;
+}
+
+@media (max-width: 768px) {
+  .bread-crumbs-container {
+    width: 90%;
+    left: 5%;
+    top: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .bread-crumbs-container {
+    top: 40%;
+  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -57,6 +132,19 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: auto;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* force 2 items in second row */
