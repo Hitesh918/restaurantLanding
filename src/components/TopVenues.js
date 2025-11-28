@@ -50,7 +50,7 @@ const TopVenues = () => {
         `}
       </style>
 
-       <div className="tb-container">
+       <div  className="tb-container">
         <p className="tb-heading">
           Introducing <span className="tb-highlight">Top Restaurants</span>
         </p>

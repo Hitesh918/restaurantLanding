@@ -44,8 +44,6 @@ export default function AutoScrollCarousel({
 
           .carousel-item {
             position: relative;
-            width: ${width}rem;
-            height: ${height}rem;
             margin-right: 30px;
             display: inline-block;
             border-radius: 12px;
@@ -79,7 +77,7 @@ export default function AutoScrollCarousel({
       <div className="carousel-wrapper">
         <div style={{ animation: `${animationDirection} 20s linear infinite` }} className="carousel-track">
           {loopSlides.map((item, i) => (
-            <div className="carousel-item" key={i}>
+            <div style={{width: `${width}rem`, height: `${height}rem`}} className="carousel-item" key={i}>
               <img src={item.src} className="carousel-img" />
               {item.label && (
                 <div className="carousel-label">{item.label}</div>
